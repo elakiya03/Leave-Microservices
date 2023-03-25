@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "department.service.url",
+    "type": "java.lang.String",
+    "description": "A description for 'department.service.url'"
+  },
+  {
+    "name": "employee.service.url",
+    "type": "java.lang.String",
+    "description": "A description for 'employee.service.url'"
+  },
+  {
+    "name": "manager.service.url",
+    "type": "java.lang.String",
+    "description": "A description for 'manager.service.url'"
+  },
+  {
+    "name": "department.service.url",
+    "type": "java.lang.String",
+    "description": "A description for 'department.service.url'"
+  },
+  {
+    "name": "leave.service",
+    "type": "java.lang.String",
+    "description": "A description for 'leave.service'"
+  },
+  {
+    "name": "leave.request",
+    "type": "java.lang.String",
+    "description": "A description for 'leave.request'"
+  },
+  {
+    "name": "task.service",
+    "type": "java.lang.String",
+    "description": "A description for 'task.service'"
+  }
+]}
