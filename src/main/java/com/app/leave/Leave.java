@@ -10,9 +10,17 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name="leaves")
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Leave {
 	
 	@Id
@@ -22,6 +30,7 @@ public class Leave {
 	private LocalDate startDate;
 	private LocalDate endDate;
 	private Long employeeId;
+	private String employeeName;
 	private Long departmentId; 
 	private Long managerId;
 	private String leaveReason;
@@ -30,73 +39,5 @@ public class Leave {
 	@Enumerated(EnumType.STRING)
 	private LeaveStatus status;
 	
-	public Leave() {}
-	
-	public Leave(Long leaveId, Long departmentId, LocalDate startDate, LocalDate endDate, Long employeeId, Long managerId, LeaveStatus status) {
-		super();
-		this.leaveId = leaveId;
-		this.startDate = startDate;
-		this.endDate = endDate;
-		this.employeeId = employeeId;
-		this.managerId = managerId;
-		this.status = status;
-		this.departmentId=departmentId;
-	}
-
-
-	public Long getLeaveId() {
-		return leaveId;
-	}
-
-	public void setLeaveId(Long leaveId) {
-		this.leaveId = leaveId;
-	}
-
-	public LocalDate getStartDate() {
-		return startDate;
-	}
-	public void setStartDate(LocalDate startDate) {
-		this.startDate = startDate;
-	}
-	public LocalDate getEndDate() {
-		return endDate;
-	}
-	public void setEndDate(LocalDate endDate) {
-		this.endDate = endDate;
-	}
-	public Long getEmployeeId() {
-		return employeeId;
-	}
-	public void setEmployeeId(Long employeeId) {
-		this.employeeId = employeeId;
-	}
-	public Long getManagerId() {
-		return managerId;
-	}
-	public void setManagerId(Long managerId) {
-		this.managerId = managerId;
-	}
-	public LeaveStatus getStatus() {
-		return status;
-	}
-	public void setStatus(LeaveStatus status) {
-		this.status = status;
-	}
-
-	public String getLeaveReason() {
-		return leaveReason;
-	}
-
-	public void setLeaveReason(String leaveReason) {
-		this.leaveReason = leaveReason;
-	}
-
-	public Long getDepartmentId() {
-		return departmentId;
-	}
-
-	public void setDepartmentId(Long departmentId) {
-		this.departmentId = departmentId;
-	}
-	
+		
 }
